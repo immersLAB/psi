@@ -3,7 +3,7 @@ Visualize HL streams:
 -  build psi from source https://github.com/microsoft/psi/wiki/Building-the-Codebase (all projects should build in release and debug)
 -  change [capture server ip to pc ip](https://github.com/microsoft/psi/blob/master/Sources/MixedReality/HoloLensCapture/HoloLensCaptureApp/HoloLensCaptureApp.cs#L113)(everytime you change this and deploy to a HoloLens that previously had the app installed, first go to you HL's documents folder and delete the CaptureServerIP.txt file, else it will keep using the old ip saved in that text file, everything else use default settings
 -  deploy /run [HoloLensCapture](https://github.com/microsoft/psi/tree/master/Sources/MixedReality/HoloLensCapture) to HL2 (HL has to have [research mode enabled](https://docs.microsoft.com/en-us/windows/mixed-reality/develop/advanced-concepts/research-mode), after starting the app give permissions)
--  run the [server](https://github.com/microsoft/psi/tree/master/Sources/MixedReality/HoloLensCapture/HoloLensCaptureServer)
+-  run the [server](https://github.com/microsoft/psi/tree/master/Sources/MixedReality/HoloLensCapture/HoloLensCaptureServer) ( the executable in the server projects build (e.g. release folder) and connect to it via the app
 ![image](https://user-images.githubusercontent.com/57159035/172236643-5c90d753-c0bb-4219-8d30-0f6237332fab.png)
 - [point PsiStudio to the dll of the Microsoft.Psi.Spatial.Euclidean.Visualization.Windows project](https://github.com/microsoft/psi/wiki/3rd-Party-Visualizers)
 - e.g. :
