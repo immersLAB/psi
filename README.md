@@ -19,7 +19,7 @@ Visualize HL streams:
 video of visualized streams:
 https://drive.google.com/file/d/1mN6bf-xWl74C8d37A5xq4T0Mi3fZgzxi/view?usp=sharing
 
-# Platform for Situated Intelligence official read me
+# Platform for Situated Intelligence official readme
 
 ![Build status](https://dev.azure.com/msresearch/psi/_apis/build/status/psi-github-ci?branchName=master)
 [![Join the chat at https://gitter.im/Microsoft/psi](https://badges.gitter.im/Microsoft/psi.svg)](https://gitter.im/Microsoft/psi?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
