@@ -9,8 +9,9 @@ Visualize HL streams:
 - e.g. :
 -  ![image](https://user-images.githubusercontent.com/57159035/173464204-ab6684be-933c-4a8e-b332-13da334ddc50.png)
 <AdditionalAssemblies>D:\marc\ImmersPsi\psi\Sources\Spatial\Microsoft.Psi.Spatial.Euclidean.Visualization.Windows\bin\Release\net472\Microsoft.Psi.Spatial.Euclidean.Visualization.Windows.dll;D:\marc\ImmersPsi\psi\Sources\MixedReality\Microsoft.Psi.MixedReality.Visualization.Windows\bin\Release\net472\Microsoft.Psi.MixedReality.Visualization.Windows.dll</AdditionalAssemblies>
-- Make sure to close PsiStudio and re-open it once you've edited the settings file
-- You should then see an option to visualize that stream as a 3D "image camera view", which draws the image with a frustum at the 3D pose of the camera
+- once you've edited the settings file open psi studio
+- open the latest store in the capture folder e.g. C:\Temp\HoloLensCapture.0000\HoloLensCapture.LargeData_000000
+- You should then see an option to visualize streams as a 3D "image camera view", which draws the image with a frustum at the 3D pose of the camera
 - You can also right-click on the stream and select "Expand Members" (or simply double-click on it). This will automatically create three "derived" streams which represent each class member: the CameraIntrinsics, CameraPose, and ViewedObject (in this case the viewed object is an image)
 - You should be able to right-click on ViewedObject and select "Visualize as Image" to see the 2D image, without needing to load any additional 3rd party visualizer DLLs
 
