@@ -1,4 +1,25 @@
-# Platform for Situated Intelligence
+Visualize HL streams:
+
+-  build psi from source https://github.com/microsoft/psi/wiki/Building-the-Codebase (all projects should build in release and debug)
+-  change [capture server ip to pc ip](https://github.com/microsoft/psi/blob/master/Sources/MixedReality/HoloLensCapture/HoloLensCaptureApp/HoloLensCaptureApp.cs#L113)(everytime you change this and deploy to a HoloLens that previously had the app installed, first go to you HL's documents folder and delete the CaptureServerIP.txt file, else it will keep using the old ip saved in that text file, everything else use default settings
+-  deploy /run [HoloLensCapture](https://github.com/microsoft/psi/tree/master/Sources/MixedReality/HoloLensCapture) to HL2 (HL has to have research mode enabled, after starting the app give permissions)
+-  run the [server](https://github.com/microsoft/psi/tree/master/Sources/MixedReality/HoloLensCapture/HoloLensCaptureServer)
+![image](https://user-images.githubusercontent.com/57159035/172236643-5c90d753-c0bb-4219-8d30-0f6237332fab.png)
+- [point PsiStudio to the dll of the Microsoft.Psi.Spatial.Euclidean.Visualization.Windows project](https://github.com/microsoft/psi/wiki/3rd-Party-Visualizers)
+- e.g. :
+-  ![image](https://user-images.githubusercontent.com/57159035/173464204-ab6684be-933c-4a8e-b332-13da334ddc50.png)
+<AdditionalAssemblies>D:\marc\ImmersPsi\psi\Sources\Spatial\Microsoft.Psi.Spatial.Euclidean.Visualization.Windows\bin\Release\net472\Microsoft.Psi.Spatial.Euclidean.Visualization.Windows.dll;D:\marc\ImmersPsi\psi\Sources\MixedReality\Microsoft.Psi.MixedReality.Visualization.Windows\bin\Release\net472\Microsoft.Psi.MixedReality.Visualization.Windows.dll</AdditionalAssemblies>
+- Make sure to close PsiStudio and re-open it once you've edited the settings file
+- You should then see an option to visualize that stream as a 3D "image camera view", which draws the image with a frustum at the 3D pose of the camera
+- You can also right-click on the stream and select "Expand Members" (or simply double-click on it). This will automatically create three "derived" streams which represent each class member: the CameraIntrinsics, CameraPose, and ViewedObject (in this case the viewed object is an image)
+- You should be able to right-click on ViewedObject and select "Visualize as Image" to see the 2D image, without needing to load any additional 3rd party visualizer DLLs
+
+![image](https://user-images.githubusercontent.com/57159035/173462855-587b53b0-415f-49d8-8000-b32ed67d011a.png)
+
+video of visualized streams:
+https://drive.google.com/file/d/1mN6bf-xWl74C8d37A5xq4T0Mi3fZgzxi/view?usp=sharing
+
+# Platform for Situated Intelligence official read me
 
 ![Build status](https://dev.azure.com/msresearch/psi/_apis/build/status/psi-github-ci?branchName=master)
 [![Join the chat at https://gitter.im/Microsoft/psi](https://badges.gitter.im/Microsoft/psi.svg)](https://gitter.im/Microsoft/psi?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
